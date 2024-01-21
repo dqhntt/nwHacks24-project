@@ -1,4 +1,5 @@
 import React from "react";
+import Navigation from "../components/Navigation";
 import ListGroup from 'react-bootstrap/ListGroup';
 import { useState, useEffect } from 'react';
 import Axios from 'axios';
@@ -22,7 +23,8 @@ export default function Leaderboard() {
   // }, []);
 
   return (
-    <div>
+    <>
+      <Navigation></Navigation>
       <h1>Leaderboard</h1>
       <ListGroup as="ol" numbered>
         {listOfTopUsers.map(user => {
@@ -40,6 +42,6 @@ export default function Leaderboard() {
           );
         })}
       </ListGroup>
-    </div>
+    </>
   );
 }
