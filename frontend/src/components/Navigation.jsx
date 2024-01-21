@@ -14,11 +14,10 @@ export default function Navigation() {
     <div>
       <Navbar expand="lg" className="bg-body-tertiary">
         <Container>
-          <Navbar.Brand href="#home">TaskTrover</Navbar.Brand>
+          <Navbar.Brand href="\">TaskTrover</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link href="./Home">Home</Nav.Link>
               <Nav.Link href="/Leaderboards">Leaderboard</Nav.Link>
               <Nav.Link href="/Rewards">Rewards</Nav.Link>
               <Nav.Link href="/Settings">Settings</Nav.Link>
