@@ -2,8 +2,6 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Navigation from "../components/Navigation";
 import LoginButton from "../components/LoginButton";
-import Image from "react-bootstrap/Image";
-import Col from "react-bootstrap/Col";
 import { useAuth0 } from "@auth0/auth0-react";
 
 export default function Home() {
@@ -23,7 +21,6 @@ export default function Home() {
           <div style={{ float: "left", width: "30%", justifyContent: "center", alignItems: "center", display: "flex", }}><button style={{ all: "unset", cursor: "pointer" }} ><img src="/remindButton.png" style={{ width: "70px" }}></img></button></div>
           <div style={{ float: "left", width: "35%", justifyContent: "center", alignItems: "center", display: "flex", }}><button style={{ all: "unset", cursor: "pointer" }} ><img src="/acceptButton.png" style={{ width: "180px" }}></img></button></div>
         </div>
-        {/* <img src="/Task.png" width="800px"></img> */}
       </div>
     </>
   );

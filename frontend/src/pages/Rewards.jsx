@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import RewardCard from "../components/RewardCard";
 import Navigation from "../components/Navigation";
-import Alert from "react-bootstrap/Alert";
+import { useAuth0 } from "@auth0/auth0-react";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 export default function Rewards() {
+  const { user, isAuthenticated } = useAuth0();
   const [points, setPoints] = useState(3000);
 
   // Subtracts points from user's total points
@@ -22,7 +23,7 @@ export default function Rewards() {
 
   return (
     <>
-      <Navigation></Navigation>
+      <Navigation userAvatar={user?.picture}></Navigation>
 
       <div
         style={{
@@ -55,10 +56,10 @@ export default function Rewards() {
           redeemPoints={subtractPoints}
         ></RewardCard>
         <RewardCard
-            title="$25 off at Best Buy"
-            numPoints={1500}
-            imgSrc="/best-buy.jpg"
-            redeemPoints={subtractPoints}
+          title="$25 off at Best Buy"
+          numPoints={1500}
+          imgSrc="/best-buy.jpg"
+          redeemPoints={subtractPoints}
         ></RewardCard>
       </div>
 
@@ -83,10 +84,10 @@ export default function Rewards() {
           redeemPoints={subtractPoints}
         ></RewardCard>
         <RewardCard
-            title="$20 off at Starbucks"
-            numPoints={1000}
-            imgSrc="/starbucks.jpg"
-            redeemPoints={subtractPoints}
+          title="$20 off at Starbucks"
+          numPoints={1000}
+          imgSrc="/starbucks.jpg"
+          redeemPoints={subtractPoints}
         ></RewardCard>
       </div>
     </>
