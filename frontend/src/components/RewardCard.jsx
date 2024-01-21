@@ -3,17 +3,13 @@ import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
 import DiscountCode from "../components/DiscountCode";
+import Alert from "react-bootstrap/Alert";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useState } from "react";
 
-export default function RewardCard({ title, numPoints, imgSrc }) {
+export default function RewardCard({ title, numPoints, imgSrc, redeemPoints }) {
   const [itemPurchased, setItemPurchased] = useState(false);
   const [showCode, setShowCode] = useState(false);
-
-  const handleButtonClick = () => {
-    setShowCode(!showCode);
-    setItemPurchased(true);
-  };
 
   const generateRandomCode = (length) => {
     const characters =
@@ -24,6 +20,17 @@ export default function RewardCard({ title, numPoints, imgSrc }) {
     }
     return code;
   };
+  
+  const [code, setCode] = useState(generateRandomCode(8));
+
+  const handleButtonClick = () => {
+    const oldNumPoints = numPoints;
+
+    if (redeemPoints(numPoints)) {
+      setShowCode(!showCode); // Toggle discount code
+      setItemPurchased(true); // Reveal discount code
+    }
+  };
 
   return (
     <Card style={{ width: "18rem", marginRight: "1rem" }}>
@@ -32,10 +39,7 @@ export default function RewardCard({ title, numPoints, imgSrc }) {
         <Card.Title>{title}</Card.Title>
         <Card.Text>{numPoints} points</Card.Text>
         <Col>
-          <DiscountCode
-            code={generateRandomCode(8)}
-            showCode={showCode}
-          ></DiscountCode>
+          <DiscountCode code={code} showCode={showCode}></DiscountCode>
           {itemPurchased ? (
             <div className="d-grid gap-2">
               <Button
