@@ -17,7 +17,7 @@ export default function DiscountCode({ code, showCode }) {
             borderRadius: "5px",
           }}
         >
-          MUST PAY FIRST
+          NOT REDEEMED
         </div>
       )}
     </div>
