@@ -1,7 +1,10 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { useAuth0 } from "@auth0/auth0-react";
+
 
 const MainPage = () => {
+    const { user, loginWithPopup, isAuthenticated, logout } = useAuth0();
   
     return(
         <div style={{ display: "flex", justifyContent: "center", alignItems: "center", flexDirection: "column"}}>
@@ -15,6 +18,7 @@ const MainPage = () => {
           <div style={{ float: "left", width: "30%", justifyContent: "center", alignItems: "center", display: "flex", }}><button style={{ all: "unset", cursor: "pointer" }} ><img src="/remindButton.png" style={{ width: "70px" }}></img></button></div>
           <div style={{ float: "left", width: "35%", justifyContent: "center", alignItems: "center", display: "flex", }}><button style={{ all: "unset", cursor: "pointer" }} ><img src="/acceptButton.png" style={{ width: "180px" }}></img></button></div>
         </div>
+        <button onClick={() => logout()} style={{ all: "unset", cursor: "pointer" }}><img src="/signOut.png" style={{ width: "100px" }} ></img></button>
       </div>
     );
   };
