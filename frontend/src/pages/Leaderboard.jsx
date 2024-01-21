@@ -1,8 +1,9 @@
 import React from "react";
 import Navigation from "../components/Navigation";
-import ListGroup from 'react-bootstrap/ListGroup';
-import { useState, useEffect } from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import Table from 'react-bootstrap/Table';
+import ProgressBar from 'react-bootstrap/ProgressBar';
+import { useState, useEffect } from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 export default function Leaderboard() {
   const HARDCODED_DATA = [
@@ -13,7 +14,7 @@ export default function Leaderboard() {
     { name: "David Wilson", rating: 4.8, points: 356600, profile_picture: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBagcssp4TteavgFnWzFBncyobYIf02I17Cg&usqp=CAU" }
   ];
 
-  const [ listOfTopUsers, setListOfTopUsers ] = useState(HARDCODED_DATA);
+  const [listOfTopUsers, setListOfTopUsers] = useState(HARDCODED_DATA);
 
   // useEffect(() => {
   //   Axios.get("").then(response => {
@@ -25,22 +26,39 @@ export default function Leaderboard() {
     <>
       <Navigation></Navigation>
       <h1>Leaderboard</h1>
-      <ListGroup as="ol" numbered>
-        {listOfTopUsers.map(user => {
-          return (
-            <ListGroup.Item action as="li" className="d-flex justify-content-start">
-              <ListGroup key='md' horizontal='md' className="my-2">
-                <ListGroup.Item className="fw-bold">{user.name}</ListGroup.Item>
-                <ListGroup.Item>Rating: {user.rating}</ListGroup.Item>
-                <ListGroup.Item>Points: {user.points}</ListGroup.Item>
-                <ListGroup.Item>
-                  <img className="profile-photo" src={user.profile_picture} width="50px" height="fit-content" />
-                </ListGroup.Item>
-              </ListGroup>
-            </ListGroup.Item>
-          );
-        })}
-      </ListGroup>
+      <Table striped bordered hover>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Rating</th>
+            <th>Points</th>
+            <th>Profile</th>
+          </tr>
+        </thead>
+        <tbody>
+          {listOfTopUsers.map((user, index) => {
+            return (
+              <tr>
+                <td>{index + 1}</td>
+                <td className="fw-bold">{user.name}</td>
+                <td>
+                  <ProgressBar now={(user.rating * 100) / 5} />
+                </td>
+                <td>{user.points}</td>
+                <td>
+                  <img
+                    className="profile-photo"
+                    src={user.profile_picture}
+                    width="fit-content"
+                    height="50px"
+                  />
+                </td>
+              </tr>
+            );
+          })}
+        </tbody>
+      </Table>
     </>
   );
 }
