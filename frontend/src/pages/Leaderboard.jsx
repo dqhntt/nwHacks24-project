@@ -3,10 +3,13 @@ import Navigation from "../components/Navigation";
 import Table from 'react-bootstrap/Table';
 import ProgressBar from 'react-bootstrap/ProgressBar';
 import { useState, useEffect } from "react";
+import { useAuth0 } from "@auth0/auth0-react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import styles from "./Leaderboard.module.css";
 
 export default function Leaderboard() {
+  const { user, isAuthenticated } = useAuth0();
+
   const HARDCODED_DATA = [
     { name: "John Doe", rating: 5.0, points: 456600, profile_picture: "https://media.wired.com/photos/593261cab8eb31692072f129/master/pass/85120553.jpg" },
     { name: "Jane Smith", rating: 4.5, points: 300565, profile_picture: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Wildlife_at_Maasai_Mara_%28Lion%29.jpg/1200px-Wildlife_at_Maasai_Mara_%28Lion%29.jpg" },
@@ -25,8 +28,8 @@ export default function Leaderboard() {
 
   return (
     <>
-      <Navigation></Navigation>
-      <h3>Leaderboard</h3>
+      <Navigation userAvatar={user?.picture}></Navigation>
+      <h1>Leaderboard</h1>
       <Table striped bordered hover>
         <thead>
           <tr>

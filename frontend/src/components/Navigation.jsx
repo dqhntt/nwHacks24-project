@@ -19,7 +19,6 @@ export default function Navigation({ userAvatar }) {
             <Nav className="me-auto">
               <Nav.Link href="/Leaderboard">Leaderboard</Nav.Link>
               <Nav.Link href="/Rewards">Rewards</Nav.Link>
-              <Nav.Link href="/Settings">Settings</Nav.Link>
               <Nav.Link href="https://github.com/dqhntt/nwHacks24-project">
                 GitHub
               </Nav.Link>
