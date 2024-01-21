@@ -5,6 +5,7 @@ import ProgressBar from 'react-bootstrap/ProgressBar';
 import { useState, useEffect } from "react";
 import { useAuth0 } from "@auth0/auth0-react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import styles from "./Leaderboard.module.css";
 
 export default function Leaderboard() {
   const { user, isAuthenticated } = useAuth0();
