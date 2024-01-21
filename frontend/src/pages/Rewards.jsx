@@ -54,6 +54,12 @@ export default function Rewards() {
           imgSrc="/amazon.jpg"
           redeemPoints={subtractPoints}
         ></RewardCard>
+        <RewardCard
+            title="$25 off at Best Buy"
+            numPoints={1500}
+            imgSrc="/best-buy.jpg"
+            redeemPoints={subtractPoints}
+        ></RewardCard>
       </div>
 
       <h2 style={{ padding: "1rem" }}>Discounts</h2>
@@ -75,6 +81,12 @@ export default function Rewards() {
           numPoints={500}
           imgSrc="/tim-hortons.jpg"
           redeemPoints={subtractPoints}
+        ></RewardCard>
+        <RewardCard
+            title="$20 off at Starbucks"
+            numPoints={1000}
+            imgSrc="/starbucks.jpg"
+            redeemPoints={subtractPoints}
         ></RewardCard>
       </div>
     </>
