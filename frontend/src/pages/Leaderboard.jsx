@@ -4,6 +4,7 @@ import Table from 'react-bootstrap/Table';
 import ProgressBar from 'react-bootstrap/ProgressBar';
 import { useState, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import styles from "./Leaderboard.module.css";
 
 export default function Leaderboard() {
   const HARDCODED_DATA = [
@@ -25,7 +26,7 @@ export default function Leaderboard() {
   return (
     <>
       <Navigation></Navigation>
-      <h1>Leaderboard</h1>
+      <h3>Leaderboard</h3>
       <Table striped bordered hover>
         <thead>
           <tr>
