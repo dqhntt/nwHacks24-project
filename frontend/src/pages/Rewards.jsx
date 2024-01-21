@@ -31,7 +31,7 @@ export default function Rewards() {
           padding: "1rem",
         }}
       >
-        <h2>Rewards</h2>
+        <h1>Rewards</h1>
         <h3>Points: {points}</h3>
       </div>
 
@@ -62,7 +62,7 @@ export default function Rewards() {
         ></RewardCard>
       </div>
 
-      <h2 style={{ padding: "1rem" }}>Discounts</h2>
+      <h1 style={{ padding: "1rem" }}>Discounts</h1>
       <div style={{ display: "flex", padding: "1rem" }}>
         <RewardCard
           title="15% off at Canadian Tire"
