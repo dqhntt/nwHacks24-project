@@ -27,16 +27,15 @@ export default function Leaderboard() {
       <ListGroup as="ol" numbered>
         {listOfTopUsers.map(user => {
           return (
-            <ListGroup.Item
-            as="li"
-            className="d-flex justify-content-between align-items-start"
-            >
-              <div className="ms-2 me-auto">
-                <div className="fw-bold">{user.name}</div>
-                Rating: {user.rating} <br/>
-                Points: {user.points} <br/>
-                <img className="profile-photo" src={user.profile_picture} width="200px" height="fit-content" />
-              </div>
+            <ListGroup.Item action as="li" className="d-flex justify-content-start">
+              <ListGroup key='md' horizontal='md' className="my-2">
+                <ListGroup.Item className="fw-bold">{user.name}</ListGroup.Item>
+                <ListGroup.Item>Rating: {user.rating}</ListGroup.Item>
+                <ListGroup.Item>Points: {user.points}</ListGroup.Item>
+                <ListGroup.Item>
+                  <img className="profile-photo" src={user.profile_picture} width="50px" height="fit-content" />
+                </ListGroup.Item>
+              </ListGroup>
             </ListGroup.Item>
           );
         })}
