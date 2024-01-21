@@ -30,12 +30,15 @@ export default function Navigation({ userAvatar }) {
               <Col xs={6} md={4}>
                 <Icon.Plus color="black" size={33} />
               </Col>
-              <Col xs={6} md={4}>
-                <Icon.Person color="black" size={30} />
-              </Col>
-              <Col xs={6} md={4}>
-                <Image src={userAvatar} width="30px" roundedCircle />
-              </Col>
+              {userAvatar == null ? (
+                <Col xs={6} md={4}>
+                  <Icon.Person color="black" size={30} />
+                </Col>
+              ) : (
+                <Col xs={6} md={4}>
+                  <Image src={userAvatar} width="30px" roundedCircle />
+                </Col>
+              )}
             </Row>
           </Navbar.Collapse>
         </Container>
