@@ -7,7 +7,7 @@ const LoginButton = () => {
 
   return !isAuthenticated ? (
     <div>
-      <button onClick={() => loginWithPopup()} style={{ all: "unset", cursor: "pointer" }}><img src="/signIn.png" style={{ width: "100px" }} ></img></button>
+      <button onClick={() => loginWithPopup()} style={{ all: "unset", cursor: "pointer" }}><img src="/signIn.png" style={{ width: "300px" }} ></img></button>
     </div>
   ) : (
     // <div>{JSON.stringify(user)}</div>
