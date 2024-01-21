@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
-import Leaderboards from "./pages/Leaderboards";
+import Leaderboard from "./pages/Leaderboard";
 import Rewards from "./pages/Rewards";
 import Settings from "./pages/Settings";
 
@@ -11,7 +11,7 @@ function App() {
         <Routes>
           <Route path="/">
             <Route index element={<Home />} />
-            <Route path="leaderboards" element={<Leaderboards />} />
+            <Route path="leaderboard" element={<Leaderboard />} />
             <Route path="rewards" element={<Rewards />} />
             <Route path="settings" element={<Settings />} />
           </Route>

@@ -17,7 +17,7 @@ export default function Navigation({ userAvatar }) {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link href="/Leaderboards">Leaderboard</Nav.Link>
+              <Nav.Link href="/Leaderboard">Leaderboard</Nav.Link>
               <Nav.Link href="/Rewards">Rewards</Nav.Link>
               <Nav.Link href="/Settings">Settings</Nav.Link>
               <Nav.Link href="https://github.com/dqhntt/nwHacks24-project">
