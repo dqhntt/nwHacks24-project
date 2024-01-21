@@ -3,7 +3,6 @@ import Home from "./pages/Home";
 import Leaderboard from "./pages/Leaderboard";
 import Rewards from "./pages/Rewards";
 import Settings from "./pages/Settings";
-import "./App.css";
 
 function App() {
   return (

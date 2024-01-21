@@ -1,9 +1,13 @@
 import React from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Navigation from "../components/Navigation";
+import LoginButton from "../components/LoginButton";
 
 export default function Home() {
   return (
-    <div>
-      <h1>Home</h1>
-    </div>
+    <>
+      <LoginButton></LoginButton>
+      <Navigation></Navigation>
+    </>
   );
 }
