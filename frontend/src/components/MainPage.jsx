@@ -10,7 +10,7 @@ const MainPage = () => {
         <div style={{ display: "flex", justifyContent: "center", alignItems: "center", flexDirection: "column"}}>
         <div style={{ display: "flex", float: "center", justifyContent: "center", alignItems: "center", width: "800px"}}>
           <div style={{ float: "left", width: "10%", justifyContent: "center", alignItems: "right", display: "flex" }}><button style={{ all: "unset", cursor: "pointer" }} ><img src="/leftArrow.png" style={{ width: "100px" }}></img></button> </div>
-          <div style={{ float: "left", width: "80%", justifyContent: "center", alignItems: "center", display: "flex" }}><img src="/taskCard.png" style={{ width: "450px" }}></img></div>
+          <div style={{ float: "left", width: "80%", justifyContent: "center", alignItems: "center", display: "flex" }}><img src="/task1.png" style={{ width: "450px" }}></img></div>
           <div style={{ float: "left", width: "10%", justifyContent: "center", alignItems: "left", display: "flex" }}><button style={{ all: "unset", cursor: "pointer" }}><img src="/rightArrow.png" style={{ width: "100px" }}></img></button></div>
         </div>
         <div style={{ float: "center", display: "flex", marginTop: "2%", justifyContent: "center", alignItems: "right" }}>
