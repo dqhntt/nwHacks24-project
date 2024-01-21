@@ -10,7 +10,8 @@ const LoginButton = () => {
       <button onClick={() => loginWithPopup()}>Sign In</button>
     </div>
   ) : (
-    <div>{JSON.stringify(user)}</div>
+    // <div>{JSON.stringify(user)}</div>
+    <div></div>
   );
 };
 
