@@ -1,6 +1,7 @@
 # nwHacks24-project
 
 Clone the repo and cd into nwHacks24-project\frontend. Then run with "npm i" then "npm start", the backend is running on port 3000, Installing packages may take a while.
+We are also able to successfully send an API request to our REST API's!
 
 ## Inspiration
 Task Trove came to life because we wanted to bring back that tight-knit community feeling in our neighborhoods. Nowadays, it seems like people aren't as connected with their neighbors as they used to be. So, we came up with this app to spice things up a bit and boost connections through games and cool rewards!
