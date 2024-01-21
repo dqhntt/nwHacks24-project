@@ -2,8 +2,6 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Navigation from "../components/Navigation";
 import LoginButton from "../components/LoginButton";
-import Image from "react-bootstrap/Image";
-import Col from "react-bootstrap/Col";
 import { useAuth0 } from "@auth0/auth0-react";
 import MainPage from "../components/MainPage";
 import LoginPage from "../components/LoginPage";
